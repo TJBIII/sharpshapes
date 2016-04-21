@@ -8,6 +8,6 @@ namespace SharpShapes
 {
     public class Shape
     {
-        public string name { get; set; }
+        public string type { get; set; }
     }
 }

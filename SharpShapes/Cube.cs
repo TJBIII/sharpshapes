@@ -31,6 +31,7 @@ namespace SharpShapes
             this.h = height;
             this.w = width;
             this.numberOfSides = 6;
+            this.type = "Cube";
         }
     }
 }

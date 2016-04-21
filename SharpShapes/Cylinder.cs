@@ -6,26 +6,28 @@ using System.Threading.Tasks;
 
 namespace SharpShapes
 {
-    public class Sphere : Shape, IShape
+    public class Cylinder : Shape, IShape
     {
         public int numberOfSides { get; set; }
         public double radius { get; set; }
+        public double height { get; set; }
 
         public double surfaceArea()
         {
-            return 4 * Math.PI * radius * radius ;
+            return (2 * Math.PI * radius * height) + (2 * Math.PI * radius * radius);
         }
 
         public double volume()
         {
-            return 4 * Math.PI * radius * radius * radius / 3;
+            return Math.PI * radius * radius * height;
         }
 
-        public Sphere(double r)
+        public Cylinder (double r, double h)
         {
             this.radius = r;
-            this.numberOfSides = 0;
-            this.type = "Sphere";
+            this.height = h;
+            this.type = "Cylinder";
+            this.numberOfSides = 3;
         }
     }
 }
